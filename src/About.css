@@ -1,0 +1,31 @@
+.about-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 25vh 5vw 5vh 5vw;
+  height: 5vh;
+  color: black;
+  font-size: calc(2.5vmin);
+}
+
+.class-awards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.adjust-font {
+  font-size: calc(2vmin);
+}
+
+.coursework {
+  display: flex;
+  flex-direction: column;
+  padding: 10vh 4vw;
+  text-align: left;
+}
+
+.About {
+  height: 100vh;
+  background-color: beige;
+}

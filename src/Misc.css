@@ -1,0 +1,9 @@
+.misc-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 25vh 5vw 5vh 5vw;
+  height: 5vh;
+  color: black;
+  font-size: calc(2.5vh);
+}

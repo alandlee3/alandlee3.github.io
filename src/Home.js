@@ -6,7 +6,9 @@ const Home = () => (
       <img src="./subway.png" />
     </div>
     <div className="intro-text">
-      <h1>Hello, I'm Alan.</h1>
+      <h1>
+        Hello, I'm <span className="my-name">Alan</span>.
+      </h1>
       <p> This is my personal website.</p>
     </div>
   </div>

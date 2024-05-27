@@ -3,12 +3,15 @@ import "./App.css";
 import NavBar from "./NavBar.js";
 import { Routes, Route } from "react-router-dom";
 import Home from "./Home.js";
+import About from "./About.js";
+import Notes from "./Notes.js";
+import Misc from "./Misc.js";
 
 const App = () => (
   <div className="App">
-    <header className="App-header">
+    <div className="App-header">
       <NavBar />
-    </header>
+    </div>
     <div className="Main">
       <Main />
     </div>
@@ -18,9 +21,10 @@ const App = () => (
 const Main = () => (
   <Routes>
     <Route path="/" element={<Home />}></Route>
-    <Route path="/about" element={<Home />}></Route>
-    <Route path="/notes" element={<Home />}></Route>
-    <Route path="/misc" element={<Home />}></Route>
+    <Route path="/about" element={<About />}></Route>
+    <Route path="/notes" element={<Notes course="base" />}></Route>
+    <Route path="/notes/6.036" element={<Notes course="6.036" />}></Route>
+    <Route path="/misc" element={<Misc />}></Route>
   </Routes>
 );
 
