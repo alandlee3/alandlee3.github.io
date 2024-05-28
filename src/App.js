@@ -24,6 +24,10 @@ const Main = () => (
     <Route path="/about" element={<About />}></Route>
     <Route path="/notes" element={<Notes course="base" />}></Route>
     <Route path="/notes/6.036" element={<Notes course="6.036" />}></Route>
+    <Route path="/notes/6.046" element={<Notes course="6.046" />}></Route>
+    <Route path="/notes/6.006" element={<Notes course="6.006" />}></Route>
+    <Route path="/notes/18.650" element={<Notes course="18.650" />}></Route>
+    <Route path="/notes/24.900" element={<Notes course="24.900" />}></Route>
     <Route path="/misc" element={<Misc />}></Route>
   </Routes>
 );

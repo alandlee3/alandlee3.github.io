@@ -2,21 +2,38 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 25vh 5vw 5vh 5vw;
+  padding: 25vh 5vw 7vh 5vw;
   height: 5vh;
   color: black;
   font-size: calc(2.5vh);
+}
+
+.notes-pdf-display {
+  width: 80vw;
+  height: 100vh;
+  padding: 0 10vw;
 }
 
 .coursework {
   display: flex;
   flex-direction: column;
   gap: 2vh;
-  padding: 10vh 10vw;
+  padding: 5vh 10vw;
   text-align: left;
   font-size: calc(2.5vh);
 }
 
+.course-notes-link {
+  text-decoration: none;
+  color: black;
+  transition-duration: 0.5s;
+}
+
+.course-notes-link:hover {
+  color: brown;
+}
+
 .Notes {
-  background-color: turquoise;
+  background-color: cornflowerblue;
+  min-height: 100vh;
 }

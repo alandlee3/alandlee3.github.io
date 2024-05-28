@@ -9,6 +9,11 @@
 
 .my-name:hover {
   color: aqua;
+  font-size: calc(7vmin);
+}
+
+.legal-stuff {
+  font-size: 1vmin;
 }
 
 img {
@@ -22,6 +27,10 @@ img {
   display: flex;
   justify-content: center;
   height: calc(50vh); /* Adjust this value based on the height of your navbar */
+}
+
+h1 {
+  font-size: calc(6vmin);
 }
 
 .intro-text {
