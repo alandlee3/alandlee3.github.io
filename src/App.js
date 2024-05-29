@@ -6,6 +6,7 @@ import Home from "./Home.js";
 import About from "./About.js";
 import Notes from "./Notes.js";
 import Misc from "./Misc.js";
+import Projects from "./Projects.js";
 
 const App = () => (
   <div className="App">
@@ -28,7 +29,8 @@ const Main = () => (
     <Route path="/notes/6.006" element={<Notes course="6.006" />}></Route>
     <Route path="/notes/18.650" element={<Notes course="18.650" />}></Route>
     <Route path="/notes/24.900" element={<Notes course="24.900" />}></Route>
-    <Route path="/misc" element={<Misc />}></Route>
+    <Route path="/game" element={<Misc />}></Route>
+    <Route path="/projects" element={<Projects />}></Route>
   </Routes>
 );
 

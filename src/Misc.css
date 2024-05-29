@@ -2,8 +2,57 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 25vh 5vw 5vh 5vw;
+  align-items: center;
+  padding: 15vh 5vw 10vh;
   height: 5vh;
   color: black;
-  font-size: calc(2.5vh);
+  font-size: calc(2.5vmin);
+}
+
+.Misc {
+  background-color: palegreen;
+  min-height: 100vh;
+}
+
+.button-primary {
+  width: 20vw;
+  height: 3vw;
+  transition-duration: 5s;
+  box-shadow: none;
+  outline: none;
+  background-color: greenyellow;
+  border-radius: 30%;
+  font-size: 1.5vmin;
+}
+
+.button-primary:active {
+  width: 80vw;
+  font-size: 5vw;
+  height: 10vw;
+  font-weight: 900;
+}
+
+.level-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 10vw;
+  font-size: 3vmin;
+}
+
+#play-again {
+  display: none;
+}
+
+.level-button {
+  color: rgb(42, 221, 93);
+  background-color: rgb(209, 51, 112);
+  border: 2px solid white;
+  flex-grow: 2;
+  padding: 1vh 0.5vw;
+  border-radius: 12px;
+  transition-duration: 0.5s;
+}
+
+.level-button:hover {
+  flex-grow: 3;
 }

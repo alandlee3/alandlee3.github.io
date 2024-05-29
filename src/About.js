@@ -16,8 +16,8 @@ const About = () => (
       </p>
     </div>
     <div className="class-awards">
-      <div className="coursework">
-        <h5>Coursework</h5>
+      <div className="about-coursework">
+        <div className="h4">Coursework</div>
         <div className="adjust-font">
           6.0004 Low-Level Programming in C and Assembly
         </div>
@@ -31,8 +31,8 @@ const About = () => (
         <div className="adjust-font">18.701 Algebra I</div>
       </div>
 
-      <div className="coursework">
-        <h5>Awards</h5>
+      <div className="about-coursework">
+        <div className="h4">Awards</div>
         <div className="adjust-font">Regeneron STS Scholar (2023)</div>
         <div className="adjust-font">
           Math Olympiad Program (2021), 4-time USAMO Qualifier

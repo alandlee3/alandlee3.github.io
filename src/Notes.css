@@ -5,13 +5,13 @@
   padding: 25vh 5vw 7vh 5vw;
   height: 5vh;
   color: black;
-  font-size: calc(2.5vh);
+  font-size: calc(2.5vmin);
 }
 
 .notes-pdf-display {
   width: 80vw;
   height: 100vh;
-  padding: 0 10vw;
+  padding: 0 10vw 10vh 10vw;
 }
 
 .coursework {
