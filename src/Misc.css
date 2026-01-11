@@ -37,6 +37,8 @@
   flex-wrap: wrap;
   padding: 0 10vw;
   font-size: 3vmin;
+  gap: 1rem;
+  margin-top: 2rem;
 }
 
 #play-again {
@@ -44,15 +46,208 @@
 }
 
 .level-button {
-  color: rgb(42, 221, 93);
-  background-color: rgb(209, 51, 112);
-  border: 2px solid white;
-  flex-grow: 2;
-  padding: 1vh 0.5vw;
-  border-radius: 12px;
-  transition-duration: 0.5s;
+  color: #ffffff;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  flex: 1 1 200px;
+  min-width: 200px;
+  padding: 1.5rem 1rem;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-size: 0.95rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.level-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s;
+}
+
+.level-button:hover::before {
+  left: 100%;
 }
 
 .level-button:hover {
   flex-grow: 3;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+.level-button:active {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.level-button.affordable {
+  animation: pulse 1s infinite;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  border-color: #ffd700;
+  box-shadow: 0 4px 20px rgba(245, 87, 108, 0.5);
+}
+
+.level-button.affordable:hover {
+  background: linear-gradient(135deg, #f5576c 0%, #f093fb 100%);
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* Subtitle */
+.subtitle {
+  font-size: 1.2rem;
+  margin-top: -10px;
+  opacity: 0.8;
+}
+
+/* Stats Panel */
+.stats-panel {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 1rem;
+  margin: 1rem auto;
+  max-width: 800px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+}
+
+.stat-item {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+}
+
+/* Combo Indicator */
+.combo-indicator {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 1rem 0;
+  animation: bounce 0.5s ease-in-out;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Progress Bar */
+.progress-container {
+  max-width: 600px;
+  margin: 1.5rem auto;
+  padding: 0 1rem;
+}
+
+.progress-label {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 30px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 15px;
+  overflow: hidden;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+.progress-fill {
+  height: 100%;
+  transition: width 0.5s ease-in-out, background-color 0.5s ease-in-out;
+  border-radius: 15px;
+}
+
+/* Achievements Panel */
+.achievements-panel {
+  max-width: 700px;
+  margin: 1.5rem auto;
+  padding: 1rem;
+  background-color: rgba(255, 215, 0, 0.3);
+  border-radius: 15px;
+  border: 3px solid gold;
+}
+
+.achievements-panel h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.achievements-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.achievement-badge {
+  background: linear-gradient(135deg, #ffd700, #ffed4e);
+  color: #333;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border: 2px solid #b8860b;
+}
+
+.no-achievements {
+  color: #666;
+  font-style: italic;
+  font-size: 0.95rem;
+}
+
+/* Particle Effects */
+.particle {
+  position: fixed;
+  font-weight: bold;
+  font-size: 1.5rem;
+  pointer-events: none;
+  animation: float-up 1s ease-out forwards;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+@keyframes float-up {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
 }
